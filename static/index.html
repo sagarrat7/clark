@@ -139,6 +139,8 @@ function toggleMic() {
 // ---- check ----
 async function sendNote() {
   const text = $("note").value.trim();
+  $("note").value = "";
+  $("micHint").textContent = "Tap to talk";
   if (!text) { $("note").focus(); return; }
   show("check");
   $("checkBody").innerHTML = `<div class="spinner">Clark is checking your past decisions…</div>`;
