@@ -121,7 +121,7 @@ function toggleMic() {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) { $("micHint").textContent = "Voice isn't supported in this browser. Type it below."; $("note").focus(); return; }
   if (listening) { rec.stop(); return; }
-  rec = new SR(); rec.lang = "en-US"; rec.interimResults = true; rec.continuous = true;
+  rec = new SR(); rec.lang = "en-US"; rec.interimResults = true; rec.continuous = false;
   let finalText = $("note").value ? $("note").value + " " : "";
   rec.onresult = (e) => {
     let interim = "";
@@ -140,6 +140,7 @@ function toggleMic() {
 async function sendNote() {
   const text = $("note").value.trim();
   if (!text) { $("note").focus(); return; }
+  if (listening) rec.abort();
   show("check");
   $("checkBody").innerHTML = `<div class="spinner">Clark is checking your past decisions…</div>`;
   try {
