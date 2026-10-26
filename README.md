@@ -1,4 +1,4 @@
-# Clark
+<h1><img src="static/logo.svg" width="40" align="center" alt="Clark logo"> Clark</h1>
 
 Keep your whole shop on the same page. Just say it.
 
