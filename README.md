@@ -17,6 +17,10 @@ New owners of cafés, bakeries, salons and pop-up shops make dozens of decisions
 
 Note: the free server can take up to a minute to wake up. Chrome works best for voice; typing works everywhere.
 
+## What's still rough
+
+- Decisions save to a shared sample log, not yet to the owner's own Google Sheet. Google Sheets integration is next.
+
 ## License
 
 MIT. See LICENSE.
